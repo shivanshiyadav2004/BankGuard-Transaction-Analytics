@@ -7,7 +7,7 @@ st.set_page_config(page_title="BankGuard | Transaction Analytics", page_icon="ğŸ
 
 @st.cache_data
 def load_data():
-    path = Path(__file__).parent / "data" / "bank_transactions_synthetic.csv"
+   path = Path(__file__).parent / "bank_transactions_synthetic.csv"
     data = pd.read_csv(path, parse_dates=["transaction_datetime"])
     return data
 
