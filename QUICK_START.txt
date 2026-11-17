@@ -1,0 +1,19 @@
+BANKGUARD QUICK START
+
+1. Extract the ZIP file.
+2. Install Python 3.10 or later.
+3. Open terminal in the BankGuard_Project folder.
+4. Run: pip install -r requirements.txt
+5. Run: streamlit run app.py
+6. Open the local URL shown in the terminal.
+
+If Streamlit is not installed, run: python -m pip install streamlit pandas plotly openpyxl
+
+For SQL:
+- Open DB Browser for SQLite.
+- Create a database.
+- Import data/bank_transactions_synthetic.csv as table `transactions`.
+- Open sql/bankguard_queries.sql and run queries.
+
+IMPORTANT:
+This is a synthetic academic demonstration. The fraud label and risk scoring are illustrative only.
