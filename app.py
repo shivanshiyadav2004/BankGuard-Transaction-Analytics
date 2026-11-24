@@ -1,3 +1,35 @@
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+from pathlib import Path
+
+st.set_page_config(page_title="BankGuard | Transaction Analytics", page_icon="🏦", layout="wide", initial_sidebar_state="expanded")
+
+st.markdown("""
+<style>
+:root { --navy:#142D4E; --canvas:#F3F6FB; }
+.stApp { background:var(--canvas); color:#172B4D; }
+[data-testid="stHeader"] { background:rgba(243,246,251,.92); }
+[data-testid="stAppViewContainer"] > .main .block-container { max-width:1500px; padding-top:2rem; padding-bottom:3rem; }
+[data-testid="stSidebar"] { background:linear-gradient(180deg,#142D4E 0%,#1D426B 100%); }
+[data-testid="stSidebar"] * { color:#F8FAFC !important; }
+[data-testid="stSidebar"] [data-baseweb="select"] > div, [data-testid="stSidebar"] [data-baseweb="input"] > div { background:#FFFFFF !important; border-color:#D7E0EC !important; }
+[data-testid="stSidebar"] [data-baseweb="select"] input, [data-testid="stSidebar"] [data-baseweb="input"] input { color:#172B4D !important; }
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p { color:#E2EAF5 !important; }
+.hero { background:linear-gradient(115deg,#142D4E 0%,#245B91 100%); padding:1.65rem 1.9rem; border-radius:18px; margin-bottom:1.35rem; box-shadow:0 8px 24px rgba(20,45,78,.12); }
+.hero h1 { color:#FFFFFF !important; margin:0; font-size:2.15rem; }
+.hero p { color:#DCEBFA !important; margin:.45rem 0 0 0; font-size:1rem; }
+.eyebrow { color:#BFDBFE !important; text-transform:uppercase; letter-spacing:.12em; font-size:.72rem; font-weight:700; margin-bottom:.5rem; }
+.section-title { color:#183B63; font-size:1.12rem; font-weight:750; margin:.7rem 0 .8rem 0; }
+div[data-testid="stMetric"] { background:#FFFFFF; border:1px solid #E4EAF2; border-radius:15px; padding:1rem 1.1rem; box-shadow:0 3px 12px rgba(25,55,90,.045); }
+div[data-testid="stMetricLabel"] p { color:#64748B !important; font-weight:600; }
+div[data-testid="stMetricValue"] { color:#173B63 !important; }
+div[data-testid="stPlotlyChart"], div[data-testid="stDataFrame"] { background:#FFFFFF; border:1px solid #E4EAF2; border-radius:14px; padding:.45rem; }
+.stButton button, .stDownloadButton button { border-radius:9px; font-weight:650; }
+hr { border-color:#DFE7F0; }
+footer { visibility:hidden; }
+</style>
+""", unsafe_allow_html=True)
 
 @st.cache_data
 def load_data():
