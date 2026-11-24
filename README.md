@@ -1,4 +1,11 @@
-# BankGuard – Bank Transaction Analytics & Fraud Risk Detection
+
+# 🏦 BankGuard
+### Bank Transaction Analytics & Fraud Risk Detection
+
+🚀 **Live Demo:** [Open BankGuard Dashboard](https://shivanshiyadav2004-bankguard-transaction-analytics-app-7carxk.streamlit.app/)
+
+💻 **Source Code:** [GitHub Repository](https://github.com/shivanshiyadav2004/BankGuard-Transaction-Analytics)
+
 
 ## Overview
 BankGuard is an academic data analytics project that explores synthetic banking transactions, calculates transparent rule-based risk indicators, and presents interactive visualisations.
@@ -24,7 +31,7 @@ Python, Pandas, Streamlit, Plotly, SQLite/SQL, Excel.
    ```bash
    streamlit run app.py
    ```
-5. Browser opens the dashboard (usually at http://localhost:8501).
+
 
 ## Dataset
 `data/bank_transactions_synthetic.csv` contains 5,000 synthetically generated transaction rows. It is created for academic demonstration and does not contain real customer data.
